@@ -1,5 +1,5 @@
 name: dockerhub
-image: mcp/dockerhub
+image: dhi.io/hub-mcp
 type: server
 meta:
   category: devops
@@ -11,8 +11,10 @@ about:
   description: Docker Hub official MCP server
   icon: https://avatars.githubusercontent.com/u/5429470?s=200&v=4
 source:
-  project: https://github.com/docker/hub-mcp
-  commit: 68f4c79223f3ac2a5b6732de58ce7ba22aa8f1a8
+  project: https://github.com/docker-hardened-images/catalog
+  commit: 51238303911efa37052fae6860411fe20475880c
+  branch: main
+  dockerfile: image/hub-mcp/debian/0.yaml
 run:
   command:
     - --transport=stdio
