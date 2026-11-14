@@ -50,3 +50,15 @@ tasks:
   security-reviewer:
     desc: Run the security reviewer agent
     cmd: go run ./cmd/security-reviewer {{.CLI_ARGS}}
+
+  struct-gen:
+    desc: Generate the struct for the schema
+    cmd: go run github.com/atombender/go-jsonschema@latest -p main schema.json > cmd/lint/lint.go
+
+  lint:
+    desc: Lint the servers against our catalog schema definition
+    cmd: go run ./cmd/lint {{.CLI_ARGS}}
+
+  lint-all:
+    desc: Lint the servers against our catalog schema definition
+    cmd: find servers -name "*.yaml" -type f | xargs go run ./cmd/lint
