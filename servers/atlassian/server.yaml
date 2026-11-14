@@ -16,7 +16,7 @@ source:
   branch: main
   commit: 0a5d2427144d72f5aade07d4fabd385421cec401
 config:
-  description: The MCP server is allowed to access these paths
+  description: The MCP server is allowed to access these paths.
   secrets:
     - name: atlassian.confluence.api_token
       env: CONFLUENCE_API_TOKEN
